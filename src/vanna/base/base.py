@@ -679,6 +679,7 @@ class VannaBase(ABC):
             "4. Please use the most relevant table(s). \n"
             "5. If the question has been asked and answered before, please repeat the answer exactly as it was given before. \n"
             f"6. Ensure that the output SQL is {self.dialect}-compliant and executable, and free of syntax errors. \n"
+            "7. To use any name in where condition use like operator with % symbol and make it lower along with column name lower."
         )
 
         message_log = [self.system_message(initial_prompt)]
